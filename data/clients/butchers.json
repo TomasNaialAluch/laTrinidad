@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rolando",
+    "name": "Carnicería y Granja Rolando",
+    "category": "Carnicería y granja de barrio",
+    "neighborhood": "La Boca",
+    "address": "Av. Regimiento de Patricios 1601",
+    "image": "assets/clients/butchers/Rolando.jpg",
+    "description": "Carnicería y granja de barrio en La Boca, un clásico del barrio elegido por los vecinos por la relación precio-calidad de sus cortes. Además de carne vacuna y de cerdo, ofrece productos de granja (pollo, huevos, fiambres), funcionando como un almacén de cercanía donde se consigue de todo para la mesa de todos los días, con atención directa y de confianza.",
+    "sources": [
+      "https://www.instagram.com/carniceriaygranjarolando/",
+      "https://www.yelp.com/biz/carnicer%C3%ADa-y-granja-rolando-buenos-aires",
+      "https://la-boca.licuo.com.ar/empresas/carniceria_rolando-224524"
+    ]
+  }
+]
