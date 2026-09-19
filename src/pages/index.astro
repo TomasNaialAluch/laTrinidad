@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Divider from '../components/ui/Divider.astro';
+import Hero from '../components/sections/home/Hero.astro';
+import About from '../components/sections/home/About.astro';
+import FeaturedClients from '../components/sections/home/FeaturedClients.astro';
+import StorePreview from '../components/sections/home/StorePreview.astro';
+---
+<BaseLayout>
+  <Hero />
+  <Divider from="var(--color-sky)" to="var(--color-white)" />
+  <About />
+  <Divider from="var(--color-white)" to="var(--color-brown)" />
+  <FeaturedClients />
+  <Divider from="var(--color-brown)" to="var(--color-sky-light)" />
+  <StorePreview />
+  <Divider from="var(--color-sky-light)" to="var(--color-brown)" />
+</BaseLayout>

@@ -1,0 +1,29 @@
+{
+  "name": "latrinidad",
+  "version": "1.0.0",
+  "description": "Sitio web para Frigorífico \"La Trinidad\", venta de cortes y chacinados de cerdo.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasNaialAluch/laTrinidad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasNaialAluch/laTrinidad/issues"
+  },
+  "homepage": "https://github.com/TomasNaialAluch/laTrinidad#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "astro": "^7.3.3"
+  }
+}

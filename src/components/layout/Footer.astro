@@ -1,0 +1,38 @@
+---
+import site from '../../data/site.json';
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`;
+---
+<footer class="footer">
+  <h2>{site.name}</h2>
+
+  <address>
+    <a href={mapsUrl} target="_blank" rel="noopener">{site.address}</a>
+  </address>
+
+  <p><a href={`tel:${site.phoneLink}`}>{site.phone}</a></p>
+
+  <ul>
+    {site.hours.map((line) => <li>{line}</li>)}
+  </ul>
+
+  {site.instagram && (
+    <p><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></p>
+  )}
+</footer>
+<style>
+  .footer {
+    padding: var(--space-lg) var(--space-md);
+    background: var(--color-brown);
+    color: var(--color-white);
+  }
+
+  .footer a {
+    color: var(--color-sky);
+  }
+
+  .footer ul {
+    padding: 0;
+    list-style: none;
+  }
+</style>

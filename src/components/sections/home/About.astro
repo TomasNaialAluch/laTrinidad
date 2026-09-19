@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../../assets/logos/logo-flag.png';
+
+const segments = [
+  'Supermercados',
+  'Carnicerías',
+  'Restaurantes',
+  'Geriátricos',
+  'Salones de eventos',
+  'Cocinas de catering',
+];
+---
+<section class="about section">
+  <div class="about__inner">
+    <div class="about__text" data-aos="fade-right">
+      <h2>Quiénes somos</h2>
+      <p>
+        Somos Frigorífico "La Trinidad": cortes y chacinados de cerdo para
+        comercios, restaurantes e instituciones. Vendemos en el local y también
+        hacemos envíos.
+      </p>
+      <p>
+        Trabajamos con cada cliente para armar precios y presupuestos a medida.
+        Escribinos y te asesoramos.
+      </p>
+      <h3>A quién le vendemos</h3>
+      <ul class="about__chips">
+        {segments.map((s) => <li>{s}</li>)}
+      </ul>
+    </div>
+    <div class="about__logo" data-aos="fade-left">
+      <Image src={logo} alt='Frigorífico "La Trinidad"' width={420} height={420} />
+    </div>
+  </div>
+</section>
+<style>
+  .about__inner {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about__logo img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .about__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding: 0;
+    list-style: none;
+  }
+
+  .about__chips li {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: var(--color-sky);
+    font-weight: 600;
+  }
+
+  @media (min-width: 800px) {
+    .about__inner {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+</style>

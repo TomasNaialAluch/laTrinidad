@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logos/logo-transparent.png';
+---
+<header class="header">
+  <a href="/">
+    <Image src={logo} alt='Frigorífico "La Trinidad"' width={64} height={64} />
+  </a>
+  <a class="header__order" href="/order">Hacer pedido</a>
+</header>
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-sky);
+  }
+
+  .header__order {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-brown);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 999px;
+  }
+</style>

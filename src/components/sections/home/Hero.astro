@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import products from '../../../data/products.json';
+import { resolveImage } from '../../../utils/images';
+---
+<section class="hero" aria-label="Nuestros productos">
+  <h1 class="hero__title">Cortes y chacinados de cerdo</h1>
+  <div class="hero__track" id="hero-track">
+    {products.map((p, i) => (
+      <figure class="hero__slide">
+        <Image
+          src={resolveImage(p.image)}
+          alt={p.name}
+          width={520}
+          height={520}
+          loading={i < 2 ? 'eager' : 'lazy'}
+        />
+        <figcaption>{p.name}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <div class="hero__controls">
+    <button type="button" id="hero-prev" aria-label="Anterior">‹</button>
+    <button type="button" id="hero-next" aria-label="Siguiente">›</button>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('hero-track');
+  const prev = document.getElementById('hero-prev');
+  const next = document.getElementById('hero-next');
+
+  if (track && prev && next) {
+    const slideSize = () => {
+      const slide = track.querySelector('.hero__slide');
+      return slide ? slide.getBoundingClientRect().width : 0;
+    };
+
+    const go = (direction) => {
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+      if (direction > 0 && atEnd) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: direction * slideSize(), behavior: 'smooth' });
+      }
+    };
+
+    prev.addEventListener('click', () => go(-1));
+    next.addEventListener('click', () => go(1));
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+      let timer = setInterval(() => go(1), 4000);
+      const stop = () => clearInterval(timer);
+      track.addEventListener('pointerenter', stop);
+      track.addEventListener('touchstart', stop, { passive: true });
+    }
+  }
+</script>
+
+<style>
+  .hero {
+    padding: var(--space-lg) 0;
+    background: var(--color-sky);
+  }
+
+  .hero__title {
+    margin: 0 var(--space-md) var(--space-md);
+    text-align: center;
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    text-transform: uppercase;
+  }
+
+  .hero__track {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .hero__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero__slide {
+    flex: 0 0 min(80vw, 420px);
+    margin: 0;
+    scroll-snap-align: center;
+    text-align: center;
+  }
+
+  .hero__slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__slide figcaption {
+    margin-top: var(--space-sm);
+    font-weight: 700;
+  }
+
+  .hero__controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .hero__controls button {
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-brown);
+    color: var(--color-white);
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+</style>

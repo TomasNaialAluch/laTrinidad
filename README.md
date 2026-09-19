@@ -2,6 +2,16 @@
 
 Sitio web para Frigorífico "La Trinidad", venta de cortes y chacinados de cerdo.
 
+## Documentación
+
+Planificación de cada página y estructura del proyecto en [docs/](docs/):
+
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — estructura de carpetas (Astro)
+- [HOME.md](docs/HOME.md) — página de inicio
+- [CLIENTS.md](docs/CLIENTS.md) — página de clientes
+- [STORE.md](docs/STORE.md) — página del local
+- [ORDER.md](docs/ORDER.md) — página de pedido
+
 ## Paleta de colores
 
 Colores extraídos de las imágenes de producto (fondo estilo bandera argentina + logo).
@@ -14,7 +24,7 @@ Colores extraídos de las imágenes de producto (fondo estilo bandera argentina 
 
 ## Logo
 
-Versiones del logo en [assets/logos/](assets/logos/):
+Versiones del logo en [src/assets/logos/](src/assets/logos/):
 
 - `logosinfondo.png` — fondo transparente (usar sobre cualquier color, ej. header/footer celeste)
 - `logofondoblacno.png` — fondo blanco sólido
@@ -22,25 +32,25 @@ Versiones del logo en [assets/logos/](assets/logos/):
 
 ## Local
 
-Fotos del local en [assets/store/](assets/store/), numeradas `1.jpeg` a `18.jpeg`.
+Fotos del local en [src/assets/store/](src/assets/store/), numeradas `1.jpeg` a `18.jpeg`.
 
 ## Clientes
 
-Logos/fotos de clientes en [assets/clients/](assets/clients/), organizados por rubro:
+Logos/fotos de clientes en [src/assets/clients/](src/assets/clients/), organizados por rubro:
 
-- [assets/clients/butchers/](assets/clients/butchers/) — carnicerías (ej. Rolando)
-- [assets/clients/restaurants/](assets/clients/restaurants/) — restaurantes (ej. KBBQ, Madero Tango, The Night Market)
+- [src/assets/clients/butchers/](src/assets/clients/butchers/) — carnicerías (ej. Rolando)
+- [src/assets/clients/restaurants/](src/assets/clients/restaurants/) — restaurantes (ej. KBBQ, Madero Tango, The Night Market)
 
-La info de cada cliente (nombre, rubro, barrio, reseña y ruta de imagen) vive en `data/clients/`:
+La info de cada cliente (nombre, rubro, barrio, reseña y ruta de imagen) vive en `src/data/clients/`:
 
-- [data/clients/butchers.json](data/clients/butchers.json)
-- [data/clients/restaurants.json](data/clients/restaurants.json)
+- [src/data/clients/butchers.json](src/data/clients/butchers.json)
+- [src/data/clients/restaurants.json](src/data/clients/restaurants.json)
 
-Cada entrada tiene su reseña redactada a partir de fuentes reales (listadas en `sources` dentro de cada JSON). A medida que sumen más clientes, se agregan como nuevas entradas en el JSON correspondiente (o un nuevo JSON dentro de `data/clients/` si es un rubro nuevo).
+Cada entrada tiene su reseña redactada a partir de fuentes reales (listadas en `sources` dentro de cada JSON). A medida que sumen más clientes, se agregan como nuevas entradas en el JSON correspondiente (o un nuevo JSON dentro de `src/data/clients/` si es un rubro nuevo).
 
 ## Productos
 
-Imágenes de productos en [assets/products/](assets/products/):
+Imágenes de productos en [src/assets/products/](src/assets/products/):
 
 - Bondiola de Cerdo
 - Carré de Cerdo

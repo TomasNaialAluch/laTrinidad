@@ -1,0 +1,12 @@
+:root {
+  --color-sky: #87d3f8;
+  --color-sky-light: #e6f6fd;
+  --color-white: #ffffff;
+  --color-brown: #3a1a15;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}

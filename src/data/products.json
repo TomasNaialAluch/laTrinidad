@@ -1,0 +1,22 @@
+[
+  { "id": "bondiola", "name": "Bondiola de Cerdo", "category": "Cortes", "image": "src/assets/products/bondiola.png", "price": null },
+  { "id": "carre", "name": "Carré de Cerdo", "category": "Cortes", "image": "src/assets/products/carre.png", "price": null },
+  { "id": "churrasquito", "name": "Churrasquito de Cerdo", "category": "Cortes", "image": "src/assets/products/churrasquito.png", "price": null },
+  { "id": "jamon", "name": "Jamón de Cerdo", "category": "Cortes", "image": "src/assets/products/jamon.png", "price": null },
+  { "id": "matambrito", "name": "Matambrito de Cerdo", "category": "Cortes", "image": "src/assets/products/matambrito.png", "price": null },
+  { "id": "paleta", "name": "Paleta de Cerdo", "category": "Cortes", "image": "src/assets/products/paleta.png", "price": null },
+  { "id": "pechito", "name": "Pechito de Cerdo", "category": "Cortes", "image": "src/assets/products/pechito.png", "price": null },
+  { "id": "puro-cerdo", "name": "Puro Cerdo", "category": "Cortes", "image": "src/assets/products/puro-cerdo.png", "price": null },
+  { "id": "ribs", "name": "Ribs de Cerdo", "category": "Cortes", "image": "src/assets/products/ribs.png", "price": null },
+  { "id": "solomillo", "name": "Solomillo", "category": "Cortes", "image": "src/assets/products/solomillo.png", "price": null },
+  { "id": "chorizo-mezcla", "name": "Chorizo Mezcla", "category": "Chacinados", "image": "src/assets/products/chorizo-mezcla.png", "price": null },
+  { "id": "chorizo-bombon", "name": "Chorizo Bombón", "category": "Chacinados", "image": "src/assets/products/chorizo-bombon.png", "price": null },
+  { "id": "salchicha-fresca", "name": "Salchicha Fresca", "category": "Chacinados", "image": "src/assets/products/salchicha-fresca.png", "price": null },
+  { "id": "morcilla-atada", "name": "Morcilla Atada", "category": "Chacinados", "image": "src/assets/products/morcilla-atada.png", "price": null },
+  { "id": "morcilla-bombon", "name": "Morcilla Bombón", "category": "Chacinados", "image": "src/assets/products/morcilla-bombon.png", "price": null },
+  { "id": "morcilla-rosca", "name": "Morcilla Rosca", "category": "Chacinados", "image": "src/assets/products/morcilla-rosca.png", "price": null },
+  { "id": "panceta-ahumada", "name": "Panceta Ahumada", "category": "Chacinados", "image": "src/assets/products/panceta-ahumada.png", "price": null },
+  { "id": "huesito", "name": "Huesito", "category": "Huesos y otros", "image": "src/assets/products/huesito.png", "price": null },
+  { "id": "patita-manito", "name": "Patita / Manito de Cerdo", "category": "Huesos y otros", "image": "src/assets/products/patita-manito.png", "price": null },
+  { "id": "ochi", "name": "Ochi", "category": "Huesos y otros", "image": "src/assets/products/ochi.png", "price": null }
+]
